@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AddCityForm from './components/AddCity';
 import Slider from 'react-slick';
 import Header from './components/Header/Header';
@@ -13,20 +13,18 @@ import AddPlace from './components/AddPlace';
 
 const App = () => {
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/add-city" element={<AddCityForm />} />
-        <Route path="/cities" element={<CityList />} />
-        <Route path='/home-page' element={<Slider />}/>
-        <Route path="/places" exact component={<PlaceList />} />
-        <Route path="/add-place" component={<AddPlace />} />
-        <Route path="/add" component={<Navbar />} />
-        <Route path='/header' component={<Header/>}/>
-        <Route path='/login' component={<Login/>}/>
-        <Route path='/register' component={<Register/>}/>
-        
-      </Routes>
-
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/add-city" element={<AddCityForm />} />
+      <Route path="/cities" element={<CityList />} />
+      <Route path='/home-page' element={<Slider />} />
+      <Route path="/places" element={<PlaceList />} />
+      <Route path="/add-place" element={<AddPlace />} />
+      <Route path="/add" element={<Navbar />} />
+      <Route path='/header' element={<Header />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+    </Routes>
   );
 };
 

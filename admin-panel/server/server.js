@@ -1,4 +1,4 @@
-// server.js
+const path = require('path');// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 app.get('/', (req, res) => {
     res.send('Rajasthan Tourism Admin Panel');
 });
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
