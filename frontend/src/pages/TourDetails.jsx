@@ -57,9 +57,12 @@ const TourDetails = () => {
                       className="ri-star-s-fill"
                       style={{ color: "var(--secondary-color)" }}
                     />
-                    {avgRating === "0.0"
-                      ? "Not rated"
-                      : `${avgRating} (${reviews.length})`}
+                    {avgRating === 0 ? null : avgRating}
+                    {totalRating === 0 ? (
+                      "Not rated"
+                    ) : (
+                      <span>({reviews.length})</span> 
+                    )}
                   </span>
                 </div>
                 <div className="tour__extra-details">
@@ -146,7 +149,7 @@ const TourDetails = () => {
             </div>
           </Col>
           <Col lg='4'>
-                <Booking tour={tour}/>  
+                <Booking tour={tour} avgRating={avgRating}/>  
           </Col>
         </Row>
       </Container>
