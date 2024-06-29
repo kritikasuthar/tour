@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/login.css";
 import loginImg from "../assets/images/login.png";
 import userIcon from "../assets/images/user.png";
+import FacebookAuth from 'react-facebook-auth';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -17,6 +18,7 @@ const Login = () => {
     e.preventDefault();
   };
   return (
+    
     <section>
       <Container>
         <Row>

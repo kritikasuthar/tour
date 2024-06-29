@@ -7,6 +7,7 @@ import TourDetails from '../pages/TourDetails';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import SearchResultList from '../pages/SearchResultList';
+import PaymentGateway from '../pages/PaymentGateway';
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
         <Route path='/tours/:id' element={<TourDetails />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/PaymentGateway' element={<PaymentGateway />} />
         <Route path='/tours/search' element={<SearchResultList />} />
     </Routes>
   );
