@@ -3,13 +3,18 @@ const router = express.Router();
 const multer = require('multer');
 const Place = require('../models/Place');
 const path = require('path');
+const fs = require('fs');
 
-// Set up multer for file uploads
+const uploadsDir = path.join(__dirname, '..', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+  destination: (_req, _file, cb) => {
+    cb(null, uploadsDir);
   },
-  filename: (req, file, cb) => {
+  filename: (_req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
   }
 });
@@ -37,7 +42,7 @@ router.post('/add', upload.single('image'), async (req, res) => {
 });
 
 // Get all places
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const places = await Place.find();
     res.status(200).json(places);
@@ -46,8 +51,18 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
-
-// Serve static files from the uploads directory
-router.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+router.delete('/api/places/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    await Place.findByIdAndDelete(id);
+    res.status(200).json({ message: 'Place deleted successfully' });
+  } catch (err) {
+    console.error("Error deleting place:", err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
 
 module.exports = router;
+
+// In your main app file (e.g., app.js or server.js), use the following to serve static files:
+

@@ -11,7 +11,7 @@ const PlaceList = () => {
   }, []);
 
   const deletePlace = (id) => {
-    axios.delete(`http://localhost:5000/api/places/${id}`)
+    axios.delete(`http://localhost:5000/api/places/delete/${id}`)
       .then(() => setPlaces(places.filter(place => place._id !== id)))
       .catch(error => console.log(error));
   };

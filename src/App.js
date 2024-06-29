@@ -22,8 +22,8 @@ const App = () => {
       <Route path="/add-place" element={<AddPlace />} />
       <Route path="/add" element={<Navbar />} />
       <Route path='/header' element={<Header />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 };

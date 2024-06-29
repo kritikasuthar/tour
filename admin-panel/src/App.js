@@ -6,12 +6,9 @@ const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/admin-home" element={<AdminHome />} />
+                <Route path="/" element={<AdminHome />} />
             </Routes>
         </Router>
     );
 };
-
-
-
 export default App;
