@@ -1,0 +1,53 @@
+.slider-container {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .Slider {
+    height: 100%;
+  }
+  
+  .Slider .slick-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .Slider .slick-dots {
+    bottom: 20px;
+  }
+  
+  h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+    
+ 
+  
+  .button-container {
+    position: relative;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(21, 94, 212, 0.8);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: rgb(235, 18, 21);
+  }
+   

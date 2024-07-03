@@ -10,7 +10,6 @@ import CityList from './components/CityList';
 import Navbar from './components/Navbar';
 import PlaceList from './components/PlaceList';
 import AddPlace from './components/AddPlace';
-import AdminHome from './pages/AdminHome';
 
 const App = () => {
   return (
@@ -25,7 +24,6 @@ const App = () => {
       <Route path='/header' element={<Header />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path='/adminhome' element={<AdminHome/>}/>
     </Routes>
   );
 };
