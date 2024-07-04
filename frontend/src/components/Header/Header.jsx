@@ -66,7 +66,7 @@ const Header = () => {
             <div className='nav__right d-flex align-items-center gap-4'>
               <div className="nav__btns d-flex align-items-center gap-4">
                 <Button className='btn secondary__btn'>
-                  <NavLink to='/login'>Login</NavLink>
+                  <NavLink to='/Cart'><i class="ri-shopping-cart-2-line"></i></NavLink>
                 </Button>
                 <Button className='btn primary__btn'>
                   <NavLink to='/register'>Register</NavLink>

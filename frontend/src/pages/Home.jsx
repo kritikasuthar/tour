@@ -33,6 +33,7 @@ const Home = () => {
                   adventures tailored just for you, with Ghumo SA, where every
                   journey is a royal saga.🏰🐪
                 </p>
+                <SearchBar />  
               </div>
             </Col>
 
@@ -51,8 +52,6 @@ const Home = () => {
                 <img src={heroImg02} alt="" />
               </div>
             </Col>
-
-         <SearchBar />  
           </Row>
         </Container>
       </section>

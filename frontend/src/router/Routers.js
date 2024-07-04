@@ -8,6 +8,9 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import SearchResultList from '../pages/SearchResultList';
 import PaymentGateway from '../pages/PaymentGateway';
+import Cart from '../pages/Cart';
+import About from '../pages/About'
+
 
 const AppRoutes = () => {
   return (
@@ -20,6 +23,8 @@ const AppRoutes = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/PaymentGateway' element={<PaymentGateway />} />
         <Route path='/tours/search' element={<SearchResultList />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/about' element={<About />} />
     </Routes>
   );
 }

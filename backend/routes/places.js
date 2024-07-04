@@ -4,6 +4,7 @@ const multer = require('multer');
 const Place = require('../models/Place');
 const path = require('path');
 const fs = require('fs');
+const { getPlaces, addPlace, updatePlace, deletePlace } = require('../controllers/placesController');
 
 const uploadsDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadsDir)) {
@@ -61,6 +62,10 @@ router.delete('/api/places/:id', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
+router.get('/', getPlaces);
+router.post('/', addPlace);
+router.put('/:id', updatePlace);
+router.delete('/:id', deletePlace);
 
 module.exports = router;
 

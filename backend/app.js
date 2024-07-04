@@ -1,5 +1,4 @@
-require('dotenv').config(); // Load environment variables from .env file
-
+require('dotenv').config(); 
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -7,6 +6,8 @@ const path = require('path');
 const authRoutes = require('./routes/auth');
 const placeRoutes = require('./routes/places');
 const citiesRoutes = require('./routes/cities');
+const usersRoutes = require('./routes/users');
+const bookingsRoutes = require('./routes/bookings');
 
 const app = express();
 const uri = process.env.MONGODB_URI;
@@ -34,6 +35,8 @@ app.use(cors());
 app.use('/api/auth', authRoutes);
 app.use('/api/places', placeRoutes);
 app.use('/api/cities', citiesRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/bookings', bookingsRoutes);
 
 // Serve static files (e.g., images uploaded)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

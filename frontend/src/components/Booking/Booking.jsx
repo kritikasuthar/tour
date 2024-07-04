@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
-import PaymentGateway from "../../pages/PaymentGateway";
-
 import { useNavigate } from "react-router-dom";
 
 const Booking = ({ tour }) => {
@@ -10,8 +8,8 @@ const Booking = ({ tour }) => {
   const navigate = useNavigate()
 
   const [credentials, setCredentials] = useState({
-    userId: "01",
-    userEmail: "xyz@gamil.com",
+    userId: "01", 
+    userEmail: "xyz@gamil.com", 
     fullName: "",
     phone: "",
     guestSize: 1,
@@ -73,7 +71,7 @@ const Booking = ({ tour }) => {
             />
             <input
               type="number"
-              placeholder="Guest"
+              placeholder="Number of guest"
               id="guestSize"
               required
               onChange={handleChange}
@@ -100,7 +98,7 @@ const Booking = ({ tour }) => {
           </ListGroupItem>
         </ListGroup>
 
-        <Button className="btn primary__btn w-100" onClick={handleClick}>
+        <Button className='btn primary__btn w-100' onClick={handleClick}>
           Book Now
         </Button>
       </div>

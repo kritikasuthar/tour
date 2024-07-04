@@ -40,11 +40,10 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3">
-            <div className="logo">
+            <div className="logo" >
               <img src={logo} alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                itaque,
+                "Discover the extraordinary <br /> in the ordinary"
               </p>
               <div className="social__links d-flex align-items-center gap-4">
                 <span>

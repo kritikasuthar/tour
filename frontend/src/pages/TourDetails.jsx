@@ -40,7 +40,6 @@ const TourDetails = () => {
     const reviewText = reviewMsgRef.current.value;
   };
 
-  alert("${reviewText}, ${tourRating}");
 
   return (
     <section>

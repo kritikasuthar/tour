@@ -8,17 +8,17 @@ import customizationImg from "../assets/images/customization.png";
 const servicesData = [
   {
     imgUrl: weatherImg,
-    title: "Calculate Weather",
+    title: "Restaurant & Cafe",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     imgUrl: guidImg,
-    title: "Guide Assistance",
+    title: "Hotels & Resorts",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
     imgUrl: customizationImg,
-    title: "Customization",
+    title: "Famous places",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   }
 ];

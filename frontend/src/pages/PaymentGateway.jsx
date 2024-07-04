@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const PaymentGateway = () => {
-  return <div>PaymentGateway</div>;
-};
+  return (
+    <div>PaymentGateway</div>
+  )
+}
 
-export default PaymentGateway;
+export default PaymentGateway
